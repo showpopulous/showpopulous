@@ -3,9 +3,13 @@
     <div class="w-full flex items-center justify-between p-6 space-x-6">
       <div class="flex-1 truncate">
         <div class="flex items-center space-x-3">
-          <h3 class="text-gray-900 text-sm leading-5 font-medium truncate">
+          <NuxtLink tag="h3" to="/profile" v-if="user.link" class="text-gray-900 cursor-pointer text-sm leading-5 font-medium truncate">
+            {{ user.name }}
+          </NuxtLink>
+          <h3 v-else class="text-gray-900 text-sm leading-5 font-medium truncate">
             {{ user.name }}
           </h3>
+          
           <span
             v-if="is_admin"
             class="flex-shrink-0 inline-block px-2 text-teal-800 text-xs leading-4 font-medium bg-green-100 rounded-full py-0.5"

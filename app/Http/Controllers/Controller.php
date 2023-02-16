@@ -51,12 +51,24 @@ class Controller extends BaseController
 
         for ($i = 0; $i !== (int) $request->get('count'); $i++) {
             $email = $faker->unique()->safeEmail;
-            $users[] = [
-                'name' => $faker->name(),
-                'job' => $faker->jobTitle,
-                'email' => $email,
-                'avatar' => 'https://avatars.dicebear.com/api/human/' . $email . '.svg',
-            ];
+
+            if ( $i == 0){
+		    $users[] = [
+                    'name' => "Joseph Showunmi", //$faker->name(),
+                    'job' => "Devops Engineer",
+                    'email' => "joseph.dev@gmail.com",
+                    'avatar' => 'https://avatars.dicebear.com/api/human/' . $email . '.svg',
+                    'link' => true,
+                    ];
+            }else{
+                $users[] = [
+                    'name' => $faker->name(),
+                    'job' => $faker->jobTitle,
+                    'email' => $email,
+                    'avatar' => 'https://avatars.dicebear.com/api/human/' . $email . '.svg',
+                    'link' => false,
+		];
+	    }
         }
 
         return $this->render($users);
