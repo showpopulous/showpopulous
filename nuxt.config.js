@@ -77,6 +77,15 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
+  /*
+  *axios: {
+  *  credentials: true,
+  *  baseURL: process.env.API_URL,
+  *  headers: {
+  *    accept: 'application/json',
+  *  },
+  *},
+  */
   axios: {
     credentials: true,
     baseURL: process.env.API_URL,

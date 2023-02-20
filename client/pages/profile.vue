@@ -25,6 +25,12 @@
                     <td class="px-2 py-2 text-gray-500 font-semibold">Email</td>
                     <td class="px-2 py-2">joseph.dev@gmail.com</td>
                 </tr>
+                <tr>
+                    <td class="px-2 py-2 text-gray-500 font-semibold">Resume</td>
+                    <td class="px-2 py-2">
+                      I started my career as a php developer. Then I transitioned to linux administration and the job title evolved into the combination of dev and ops. Therefore, I am now a devops engineer and I have been doing devops work since 2013.
+                    </td>
+                </tr>
             </tbody></table>
 
         </div>
